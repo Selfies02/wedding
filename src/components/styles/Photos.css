@@ -1,0 +1,142 @@
+.photos-section {
+  background-color: var(--light-grey);
+  padding: 3rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.photos-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-text);
+  margin-bottom: 2rem;
+}
+
+.carousel-3d-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.carousel-3d {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.carousel-item-3d {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+
+.carousel-item-3d img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item-3d.active {
+  transform: translateZ(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-item-3d.prev {
+  transform: translateX(-120%) rotateY(30deg) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-item-3d.next {
+  transform: translateX(120%) rotateY(-30deg) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  color: var(--primary-text);
+}
+
+.carousel-control.prev {
+  left: 40px;
+}
+
+.carousel-control.next {
+  right: 40px;
+}
+
+/* Estilos del collage */
+.photo-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tamaño mínimo mayor */
+  gap: 30px; /* Espaciado entre las imágenes */
+  max-width: 1500px; /* Ancho máximo más grande */
+  margin: 3rem auto 0;
+}
+
+.collage-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Bordes redondeados más suaves */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+}
+
+  @media (max-width: 768px) {
+    .photos-title {
+      font-size: 1.8rem; /* Reduce el tamaño de la fuente */
+    }
+  
+    .carousel-3d {
+      height: 250px; /* Reduce la altura para pantallas pequeñas */
+    }
+  
+    .carousel-item-3d {
+      width: 70%; /* Aumenta el ancho del item en pantallas pequeñas */
+    }
+  
+    .carousel-control {
+      width: 30px; /* Ajusta el tamaño de los botones */
+      height: 30px;
+      font-size: 1rem; /* Ajusta el tamaño del ícono */
+    }
+
+    .carousel-control.prev {
+      left: 10px; /* Reduce el margen en los controles */
+    }
+      
+    .carousel-control.next {
+      right: 10px; /* Reduce el margen en los controles */
+    }
+
+    .photo-collage {
+        grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas */
+        gap: 15px; /* Espaciado más pequeño entre imágenes */
+        max-width: 90%; /* Asegura que use todo el ancho de pantalla en móviles */
+      }
+    
+      .collage-item img {
+        border-radius: 8px; /* Bordes más pequeños */
+      }
+}

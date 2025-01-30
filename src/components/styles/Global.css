@@ -1,0 +1,56 @@
+:root {
+  --primary-bg: #fafafa;
+  --primary-text: #444;
+  --secondary-bg: #700d1d;
+  --highlight-color: #f15e5c;
+  --light-grey: #f7f7f7;
+}
+
+body {
+  font-family: 'Rewrite', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rewrite', sans-serif;
+  color: var(--primary-text);
+}
+
+p {
+  font-family: 'Rewrite', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}

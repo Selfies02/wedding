@@ -1,0 +1,8 @@
+/* index.css */
+@import url('https://fonts.cdnfonts.com/css/rewrite');
+@import './Global.css';
+@import './Hero.css';
+@import './Countdown.css';
+@import './Itinerary.css';
+@import './Navbar.css';
+@import './Photos.css';

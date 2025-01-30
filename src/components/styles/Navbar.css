@@ -1,0 +1,55 @@
+/* Navbar.css */
+.navbar {
+  font-family: 'Rewrite', sans-serif;
+  background-color: #f8f9fa !important;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-family: 'Rewrite', sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary-text);
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border-color: #6f42c1;
+}
+
+.navbar-toggler-icon {
+  background-color: #6f42c1;
+}
+
+.nav-item {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-link {
+  color: var(--primary-text) !important;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-text);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--primary-text) !important;
+}

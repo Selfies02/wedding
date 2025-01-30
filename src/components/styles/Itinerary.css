@@ -1,0 +1,112 @@
+/* Contenedor principal */
+.itinerary-section {
+  padding: 3rem 0;
+  background-color: #fafafa; /* Fondo limpio y claro */
+  text-align: center;
+}
+
+.itinerary-title-main {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #444; /* Texto más oscuro para contraste */
+  margin-bottom: 2rem;
+  letter-spacing: 1px; /* Espaciado sutil */
+}
+
+/* Contenedor del itinerario */
+.itinerary-container {
+  font-family: 'Rewrite', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Reducir espacio entre tarjetas para un diseño compacto */
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Tarjeta del itinerario */
+.itinerary-card {
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo suave y limpio */
+  background-size: 30%; /* Tamaño de la imagen de fondo */
+  background-repeat: no-repeat;
+  background-position: center; /* Imagen de fondo en la parte superior */
+  color: #444; /* Color de texto más neutro */
+  border-radius: 15px; /* Bordes redondeados modernos */
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 400px; /* Altura moderada */
+}
+
+/* Marco interno */
+.itinerary-frame {
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Marco ligero y minimalista */
+  border-radius: 12px; /* Ajustar al diseño moderno */
+  margin: 15px; /* Espaciado interno */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(221, 215, 215, 0.85); /* Fondo suave para resaltar contenido */
+}
+
+/* Contenido del itinerario */
+.itinerary-content {
+  padding: 20px;
+}
+
+.itinerary-title {
+  font-size: 1.8rem;
+  font-weight: 600; /* Peso moderado */
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  color: #222;
+}
+
+.itinerary-description {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.itinerary-button {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  background: #e7e7e7;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.itinerary-button:hover {
+  background: #d6d6d6; /* Cambio sutil de color */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .itinerary-container {
+    grid-template-columns: 1fr;
+  }
+
+  .itinerary-card {
+    height: auto; /* Altura automática para dispositivos pequeños */
+  }
+
+  .itinerary-title {
+    font-size: 1.6rem;
+  }
+
+  .itinerary-description {
+    font-size: 1rem;
+  }
+}
